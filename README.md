@@ -61,7 +61,7 @@ Para garantir que a aplicação seguisse padrões reais de mercado, implementei 
 
 1. **Clonar o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/omega-tech.git](https://github.com/seu-usuario/omega-tech.git)
+   git clone [https://github.com/edu-silvadev/projetos-es](https://github.com/edu-silvadev/projeto-es)
    cd omega-tech
 
 2. **Configure o Backend:**

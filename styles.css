@@ -1,0 +1,47 @@
+body {
+    /* cor de fundo */
+    background-color: #B5FAFF;
+    /* flebox */
+    display: flex;
+    /* alinhamento na horizontal */
+    justify-content: center;
+    /* alinhamento na vertical */
+    align-items: center;
+    /* ocupa a tela inteira verticalmente */
+    height: 100vh;
+}
+/* para referenciar um class usamos . */
+/* usamos class para retilizar o estilo */ 
+.cartao {
+    background-color: #fff;
+    /* cantos arredondos */
+    border-radius: 10px;
+    /* espaçamento */
+    padding: 20px;
+    /* alinhamento do texto */
+    text-align: center;
+}
+button {
+    /* sem borda */
+    border: none;
+    /* cor de fundo */
+    background-color: #043F94;
+    /* cor */
+    color: #fff;
+    /* cantos arrendondados */
+    border-radius: 10px;
+    /* espaçamento interno */
+    padding: 10px 20px ;
+    /* criar cursor quando mouse passa em cima */
+    cursor: pointer;
+}
+.imagem {
+    /* largura */
+    width: 120px;
+    /* altura */
+    height: 120px;
+    /* cantos arrendondados - foto circular */
+    border-radius: 50%;
+    /* borda colorida */
+    border: 3px solid #7bff;
+}
