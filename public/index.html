@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">Omega Tech</a> 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="servico.html">Serviços</a></li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg>
+        </button>
+
+        <i class="fas fa-user-circle btn-login-icon" id="login-icon" onclick="toggleAuthModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+        </i>
+
+        <div class="user-dropdown" id="user-dropdown">
+            <span class="dropdown-trigger" id="user-greeting">Olá, Usuário ▼</span>
+            <div class="dropdown-content">
+                <a href="perfil.html">Minha Conta</a>
+                <a href="pedidos.html">Meus Pedidos</a>
+                <hr class="dropdown-divider">
+                <a href="#" id="btn-logout" class="logout-link">Sair</a>
+            </div>
+        </div>
+    </div>
+    <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-hamburger">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-close" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+        </svg>
+    </button>
+</header>
+<main class="home">
+    <section class="hero">
+        <h1>Bem-vindo à Omega Tech</h1>
+        <p>Inovação e tecnologia para transformar seu mundo.</p>
+        <div class="links">
+        <button><a href="produtos.html" class="btn">Saiba Mais</a></button>
+        </div>
+    </section>
+    <section class="features">
+        <div class="feature">
+            <h2>Produtos de Alta Qualidade</h2>
+            <p>Oferecemos uma ampla gama de produtos tecnológicos para atender às suas necessidades.</p>
+        </div>
+        <div class="feature">
+            <h2>Serviços Personalizados</h2>
+            <p>Nossos serviços são adaptados para garantir a melhor experiência para nossos clientes.</p>
+        </div>
+        <div class="feature">
+            <h2>Suporte 24/7</h2>
+            <p>Estamos sempre disponíveis para ajudar você com qualquer dúvida ou problema.</p>
+        </div>
+    </section>
+</main>   
+    <div id="auth-modal" class="modal-container">
+        <div class="modal-content">
+        <span class="close-btn" onclick="toggleAuthModal()">x</span>
+        <p id="auth-message" class="auth-message"></p>
+        <div id="register-form" class="auth-form">
+            <h2>Criar Conta</h2> 
+            <form id="form-registro">
+                <input type="text" id="reg-nome" placeholder="Primeiro Nome" required>
+                <input type="email" id="reg-email" placeholder="E-mail" required>
+                <input type="password" id="reg-senha" placeholder="Senha" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember-reg">
+                    <label for="remember-reg">Lembre de mim</label>
+                </div>
+                <button type="button" class="btn-main" onclick="cadastrarUsuario()">Cadastrar</button>
+            </form>
+            <p>Já possui uma conta? <a href="javascript:void(0)" onclick="switchForm('login')">Fazer Login</a></p>
+        </div>
+
+        <div id="login-form" class="auth-form" style="display: none;">
+            <h2>Entrar</h2>
+            <form id="form-login">
+                <input type="email" id="login-email" placeholder="E-mail" required>
+                <input type="password" id="login-senha" placeholder="Senha" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember-log">
+                    <label for="remember-log">Lembre de mim</label>
+                </div>
+                <button type="button" class="btn-main" onclick="logarUsuario()">Entrar</button>
+            </form>
+            <p>Não tem conta? <a href="javascript:void(0)" onclick="switchForm('register')">Cadastre-se</a></p>
+        </div>
+    </div>
+</div>
+    <script src="scripts.js" defer></script>
+</body>
+</html>

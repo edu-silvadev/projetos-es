@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+    <a href="index.html" class="logo">Omega Tech</a> 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="servico.html">Serviços</a></li>
+            <li><a href="contatos.html">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart">
+        <button>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+            </svg>
+        </button>
+
+        <i class="fas fa-user-circle btn-login-icon" id="login-icon" onclick="toggleAuthModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+            </svg>
+        </i>
+
+        <div class="user-dropdown" id="user-dropdown">
+            <span class="dropdown-trigger" id="user-greeting">Olá, Usuário ▼</span>
+            <div class="dropdown-content">
+                <a href="perfil.html">Minha Conta</a>
+                <a href="pedidos.html">Meus Pedidos</a>
+                <hr class="dropdown-divider">
+                <a href="#" id="btn-logout" class="logout-link">Sair</a>
+            </div>
+        </div>
+    </div>
+    <button class="menu-toggle" id="mobile-menu" aria-label="Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-hamburger">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icon-close" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+        </svg>
+    </button>
+</header>
+    <main class="container">
+        <section class="products-section">
+            <div class="list">
+                <div class="item active">
+                    <div class="product-image">
+                        <img src="./img/applewatch.png.png" alt="App Watch">
+                    </div>
+                    <div class="info">
+                        <h3 class="product-name">Apple Watch</h3>
+                            <ul class="product-description">
+                                <li><strong>Armazenamento:</strong> 64 GB</li>
+                                <li><strong>Conectividade:</strong> Bluetooth 5.3 e Wi-Fi</li>
+                                <li><strong>Destaques:</strong> Tela Retina Sempre Ativa, sensores avançados de saúde (ECG/Oxigênio) e resistência à água.</li>
+                            </ul>
+                        <div class="product-price">R$ 2.999,00</div>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-image">
+                        <img src="./img/fonedeouvido.png.png" alt="Fone de Ouvido">
+                    </div>
+                    <div class="info">
+                        <h3 class="product-name">Fone de Ouvido</h3>
+                            <ul class="product-description">
+                                <li><strong>Conectividade:</strong> Bluetooth 5.3 (alta estabilidade e baixa latência)</li>
+                                <li><strong>Bateria:</strong> Até 6 a 8 horas de autonomia nos fones (+24 horas com o estojo)</li>
+                                <li><strong>Destaques:</strong> Cancelamento Ativo de Ruído (ANC) e resistência a suor.</li>
+                            </ul>
+                        <div class="product-price">R$ 499,00</div>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-image">
+                        <img src="./img/notebookGalaxyTabS10.png" alt="Galaxy Tab S10">
+                    </div>
+                    <div class="info">
+                        <h3 class="product-name">Galaxy Tab S10</h3>
+                            <ul class="product-description">
+                                <li><strong>Tela:</strong> 10.4 polegadas, resolução 2560 x 1600 pixels</li>
+                                <li><strong>Processador:</strong> Exynos 2100 (8 núcleos, 2.4 GHz)</li>
+                                <li><strong>Memória:</strong> 8 GB de RAM e 128 GB de armazenamento</li>
+                            </ul>
+                        <div class="product-price">R$ 4.299,00</div>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-image">
+                        <img src="./img/motoG56.png" alt="Moto G56">
+                    </div>
+                    <div class="info">
+                        <h3 class="product-name">Moto G56</h3>
+                        <ul class="product-description">
+                            <li><strong>Processador:</strong> Snapdragon 730G (8 núcleos, 2.2 GHz)</li>
+                            <li><strong>Memória:</strong> 8 GB de RAM e 128 GB de armazenamento</li>
+                            <li><strong>Câmera:</strong> Câmera principal de 64 MP e câmera frontal de 16 MP</li>
+                        </ul>
+                        <div class="product-price">R$ 2.499,00</div>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-image">
+                        <img src="./img/notebookAsusRz7.png" alt="Notebook Asus Ryzen 7">
+                    </div>
+                    <div class="info">
+                        <h3 class="product-name">Notebook Asus Ryzen 7</h3>
+                        <ul class="product-description">
+                            <li><strong>Processador:</strong> Intel Core i7-1165G7 (4 núcleos, 2.7 GHz)</li>
+                            <li><strong>Memória:</strong> 16 GB de RAM e 512 GB de armazenamento SSD</li>
+                            <li><strong>Tela:</strong> 15.6 polegadas, resolução 1920 x 1080 pixels</li>
+                        </ul>
+                        <div class="product-price">R$ 4.099,00</div>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product-image">
+                        <img src="./img/applevisionvr.png.png" alt="Fone de Ouvido">
+                    </div>
+                    <div class="info">
+                        <h3 class="product-name">Apple Vision Pro</h3>
+                        <ul class="product-description">
+                            <li><strong>Processador:</strong> M1芯片 (8核, 3.2 GHz)</li>
+                            <li><strong>Memória:</strong> 16 GB de RAM e 512 GB de armazenamento SSD</li>
+                            <li><strong>Tela:</strong> 15.6 polegadas, resolução 1920 x 1080 pixels</li>
+                        </ul>
+                        <div class="product-price">R$ 3.499,00</div>
+                        <button class="buy-button">Comprar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="arrows">
+            <button class="arrow-button" id="previous">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+                    <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                </svg>
+            </button>
+            <button class="arrow-button" id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="indicators">
+            <div class="number">01</div>
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </main>
+    <div id="auth-modal" class="modal-container">
+    <div class="modal-content">
+        <span class="close-btn" onclick="toggleAuthModal()">x</span>
+        <p id="auth-message" class="auth-message"></p>
+        <div id="register-form" class="auth-form">
+            <h2>Criar Conta</h2>
+            <form id="form-registro" onsubmit="cadastrarUsuario(event)">
+                <input type="text" id="reg-nome" placeholder="Nome Completo" required>
+                <input type="email" id="reg-email" placeholder="E-mail" required>
+                <input type="password" id="reg-senha" placeholder="Senha" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember-reg">
+                    <label for="remember-reg">Lembre de mim</label>
+                </div>
+                <button type="submit" class="btn-main">Cadastrar</button>
+            </form>
+            <p>Já possui uma conta? <a href="javascript:void(0)" onclick="switchForm('login')">Fazer Login</a></p>
+        </div>
+
+        <div id="login-form" class="auth-form" style="display: none;">
+            <h2>Entrar</h2>
+            <form id="form-login" onsubmit="logarUsuario(event)">
+                <input type="email" id="login-email" placeholder="E-mail" required>
+                <input type="password" id="login-senha" placeholder="Senha" required>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember-log">
+                    <label for="remember-log">Lembre de mim</label>
+                </div>
+                <button type="submit" class="btn-main">Entrar</button>
+            </form>
+            <p>Não tem conta? <a href="javascript:void(0)" onclick="switchForm('register')">Cadastre-se</a></p>
+        </div>
+    </div>
+</div>
+    <script src="scripts.js" defer></script>
+    <script src="produtos.js" defer></script>
+</body>
+</html>
